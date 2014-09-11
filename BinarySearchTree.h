@@ -284,7 +284,7 @@ void BinaryTree<TreeType>::delete_helper(TreeType * &this_root)
 }
 
 template <typename TreeType>
-BinaryTree<TreeType>::~BinaryTree() // NEEDS UPDATING
+BinaryTree<TreeType>::~BinaryTree() // TODO: Update
 {
     delete_helper(root);
     
@@ -293,53 +293,4 @@ BinaryTree<TreeType>::~BinaryTree() // NEEDS UPDATING
 
 }
 
-
-
-/*
-class BinaryTree
-{
-private:
-    Bnode<TreeType> * root;
-    int nodeCount;
-public:
-    BinaryTree(const TreeType  &input); // constructor
-    BinaryTree(const BinaryTree<TreeType>  &input); // Copy Constructore
-    void insert(const TreeType &input);
-};
-
-template <typename TreeType>
-BinaryTree<TreeType>::BinaryTree( const TreeType &input) // Default Constructor
-{
-    nodeCount = 1;
-    root = new Bnode<TreeType>;
-    root->data = input;
-    root->left = NULL;
-    root->right = NULL;
-}
-
-
-
-template <typename TreeType> // Copy Constructor
-BinaryTree<TreeType>::BinaryTree(const BinaryTree<Bnode<TreeType> > &input)
-{
-    root = new Bnode<TreeType>;
-}
-
-
-
-// To insert an item in BST
-template <typename TreeType>
-void BinaryTree<TreeType>::insert(const TreeType &input) 
-{
-    if (nodeCount == 0)
-    {
-        root = new Bnode<TreeType>;
-        root->data = input;
-        root->right = NULL;
-        root->left = NULL;
-        nodeCount++;
-    }
-    
-}
-*/
 #endif
